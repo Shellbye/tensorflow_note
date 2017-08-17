@@ -1,0 +1,13 @@
+
+MNIST For ML Beginners
+    https://www.tensorflow.org/get_started/mnist/beginners
+
+Softmax Regression
+    http://ufldl.stanford.edu/tutorial/supervised/SoftmaxRegression/
+
+Visualizing MNIST: An Exploration of Dimensionality Reduction
+    http://colah.github.io/posts/2014-10-Visualizing-MNIST/
+
+Softmax
+    http://neuralnetworksanddeeplearning.com/chap3.html#softmax
+
