@@ -5,7 +5,6 @@ import urllib
 import urllib2
 import os
 import re
-import argparse
 import time
 import sqlite3
 
@@ -57,8 +56,8 @@ def get_label(file_path):
 
 if __name__ == "__main__":
     # training set
-    # get_img("training_set.txt", 2000)
-    # get_label("training_set.txt")
+    get_img("training_set.txt", 100)
+    get_label("training_set.txt")
 
     # test set
     get_img("testing_set.txt", 50)
