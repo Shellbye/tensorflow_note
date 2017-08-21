@@ -48,7 +48,7 @@ CAPTCHA_LENGTH = 1
 CAPTCHA_LETTER_ROTATION = (-5, 5)
 CAPTCHA_IMAGE_SIZE = (28, 28)
 CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.word_challenge'  # this two should set together
-CAPTCHA_WORDS_DICTIONARY = 'utils/words_numbers'                          # this two should set together
+CAPTCHA_WORDS_DICTIONARY = 'utils/words_alphabet'                          # this two should set together
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

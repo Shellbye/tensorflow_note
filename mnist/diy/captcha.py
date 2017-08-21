@@ -5,7 +5,7 @@ import random
 
 import numpy as np
 
-from mnist.diy.utils import label_to_list, load_image
+from mnist.diy.utils import label_to_list, load_image, label_to_list_alphabet
 
 
 class CaptchaData(object):
@@ -29,12 +29,15 @@ class CaptchaData(object):
                 })
         return train_imgs
 
-    def train_next_batch(self, count):
+    def train_next_batch(self, count, alpha=False):
         batch_image, batch_label = [], []
         while len(batch_label) < count:
             c = random.choice(self.training_images)
             batch_image.append(c['image_arry'])
-            batch_label.append(label_to_list(c['label']))
+            if alpha:
+                batch_label.append(label_to_list_alphabet(c['label']))
+            else:
+                batch_label.append(label_to_list(c['label']))
         return np.asanyarray(batch_image), np.asarray(batch_label)
 
     def test_images(self):
@@ -43,16 +46,19 @@ class CaptchaData(object):
             t_imgs.append(img['image_arry'])
         return np.asarray(t_imgs)
 
-    def test_labels(self):
+    def test_labels(self, alpha=False):
         t_imgs = []
         for img in self.testing_images:
-            t_imgs.append(label_to_list(img['label']))
+            if alpha:
+                t_imgs.append(label_to_list_alphabet(img['label']))
+            else:
+                t_imgs.append(label_to_list(img['label']))
         return np.asarray(t_imgs)
 
 
 def get_captcha():
-    captcha = CaptchaData("../utils/testing_set.txt",
-                          "../utils/training_set.txt")
+    captcha = CaptchaData("/Users/shellbye/Projects/tensorflow_note/utils/testing_set.txt",
+                          "/Users/shellbye/Projects/tensorflow_note/utils/training_set.txt")
     return captcha
 
 if __name__ == '__main__':

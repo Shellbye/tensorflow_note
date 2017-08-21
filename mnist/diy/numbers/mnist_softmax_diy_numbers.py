@@ -69,5 +69,5 @@ def real_test(model_save_path, testing_data):
     print("right:{}, wrong:{}".format(right, wrong))
 
 if __name__ == '__main__':
-    # train("models_numbers/model.ckpt")
-    real_test("models_numbers/model.ckpt", "../utils/testing_set.txt")
+    train("models_numbers/model.ckpt")
+    # real_test("models_numbers/model.ckpt", "../utils/testing_set.txt")
