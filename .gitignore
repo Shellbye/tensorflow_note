@@ -102,3 +102,4 @@ data/mnist/diy/alphabet/images
 data/mnist/diy/alphabet/*.txt
 data/mnist/diy/numbers/images
 data/mnist/diy/numbers/*.txt
+mnist/models/*
