@@ -95,7 +95,10 @@ ENV/
 # Rope project settings
 .ropeproject
 
-static/images/*.jpg
 .idea
 db.sqlite3
 test.py
+data/mnist/diy/alphabet/images
+data/mnist/diy/alphabet/*.txt
+data/mnist/diy/numbers/images
+data/mnist/diy/numbers/*.txt

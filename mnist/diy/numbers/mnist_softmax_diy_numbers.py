@@ -28,7 +28,7 @@ def train(model_save_path):
     sess = tf.InteractiveSession()
     tf.global_variables_initializer().run()
     # Train
-    captcha = get_captcha()
+    captcha = get_captcha("/Users/shellbye/Projects/tensorflow_note/utils/")
 
     for _ in range(1000):
         batch_xs, batch_ys = captcha.train_next_batch(100)

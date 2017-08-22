@@ -56,9 +56,9 @@ class CaptchaData(object):
         return np.asarray(t_imgs)
 
 
-def get_captcha():
-    captcha = CaptchaData("/Users/shellbye/Projects/tensorflow_note/utils/testing_set.txt",
-                          "/Users/shellbye/Projects/tensorflow_note/utils/training_set.txt")
+def get_captcha(data_path):
+    captcha = CaptchaData(data_path + "testing_set.txt",
+                          data_path + "training_set.txt")
     return captcha
 
 if __name__ == '__main__':
