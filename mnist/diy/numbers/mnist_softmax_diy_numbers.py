@@ -28,7 +28,7 @@ def train(model_save_path):
     sess = tf.InteractiveSession()
     tf.global_variables_initializer().run()
     # Train
-    captcha = get_captcha("/Users/shellbye/Projects/tensorflow_note/utils/")
+    captcha = get_captcha("/Users/shellbye/Projects/tensorflow_note/data/mnist/diy/numbers/")
 
     for _ in range(1000):
         batch_xs, batch_ys = captcha.train_next_batch(100)
@@ -69,5 +69,6 @@ def real_test(model_save_path, testing_data):
     print("right:{}, wrong:{}".format(right, wrong))
 
 if __name__ == '__main__':
-    train("models_numbers/model.ckpt")
-    # real_test("models_numbers/model.ckpt", "../utils/testing_set.txt")
+    # train("models_numbers/model.ckpt")
+    real_test("models_numbers/model.ckpt",
+              "/Users/shellbye/Projects/tensorflow_note/data/mnist/diy/numbers/testing_set.txt")
